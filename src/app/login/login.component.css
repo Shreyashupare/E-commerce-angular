@@ -1,0 +1,21 @@
+form {
+  border: 1px solid black;
+  box-shadow: 0 0 10px rgb(41, 40, 40);
+  text-align: center;
+  width: fit-content;
+  padding: 25px;
+  margin: auto;
+  margin-top: 15%;
+}
+
+.login_button {
+  color: white;
+  background-color: green;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.login_button:hover {
+  background-color: black;
+  box-shadow: 0 0 10px rgb(18, 75, 18);
+}

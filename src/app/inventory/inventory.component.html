@@ -1,0 +1,9 @@
+<h2>List of Products in inventory</h2>
+<table class="tb">
+    <thead><th>ID</th><th>Name</th><th>Price</th></thead>
+    <tr *ngFor="let products of productlist"><td>{{products.id}}</td>
+        <td>{{products.name}}</td>
+        <td>{{products.price}}</td>
+        </tr>
+    
+</table>

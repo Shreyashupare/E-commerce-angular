@@ -1,0 +1,17 @@
+<div *ngFor="let user of userlist">
+    
+    <h5 id="menu_header">{{user.firstname}}</h5>
+    <ul class="menu">
+        <li role="presentation"><a routerLink="login">Login</a></li>
+        <li role="presentation"><a routerLink="registration">Registration</a></li>
+        <li role="presentation"><a routerLink="products">Products</a></li>
+        <li role="presentation"><a routerLink="inventory">Inventory</a></li>
+        <li role="presentation"><a routerLink="profile">Profile</a></li>
+    </ul>
+    <!--
+    <h2>Profile</h2>
+    <p>Full Name : {{user.firstname}} {{user.lastname}}</p>
+    <p>Email Id : {{user.email}}</p>
+    <p>Date of birth : {{user.dob}}</p>
+    -->
+</div>

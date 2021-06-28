@@ -1,0 +1,15 @@
+#menu_header {
+  background-color: rgb(10, 107, 233);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  text-align: right;
+  padding-right: 30px;
+  color: white;
+  font-size: x-large;
+}
+
+li{
+  display: inline;
+  padding: 10px;
+}
