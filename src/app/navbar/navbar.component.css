@@ -2,14 +2,42 @@
   background-color: rgb(10, 107, 233);
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 100%;
-  text-align: right;
   padding-right: 30px;
   color: white;
   font-size: x-large;
 }
 
+.menus{
+  padding: 10px;
+  border-right: 1px solid white;
+}
 li{
   display: inline;
-  padding: 10px;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+.menus:hover{
+  background-color: blue;
+}
+
+.user{
+  text-align:right;
+  float: right;
+  font-size: xx-large;
+}
+
+h1{
+  font-size: 60px;
+  text-align:center;
+  border: 3px solid black;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-shadow: 3px 3px 5px rgb(41, 38, 38);
+}
+div{
+  background-color: rgb(161, 236, 255);
 }

@@ -1,3 +1,6 @@
+import { UsersComponent } from './users/users.component';
+import { user } from './user/user';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { RegisterComponent } from './register/register.component';
@@ -21,6 +24,14 @@ const routes: Routes = [
   {
     path:"inventory",
     component:InventoryComponent
+  },
+  {
+    path:"users",
+    component:UsersComponent
+  },
+  {
+    path:"**",
+    component:PagenotfoundComponent
   }
 ];
 

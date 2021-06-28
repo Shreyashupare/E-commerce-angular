@@ -10,6 +10,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { InventoryComponent } from './inventory/inventory.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ChangevalueComponent } from './changevalue/changevalue.component';
+import { HttpClientModule} from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,14 +22,18 @@ import { InventoryComponent } from './inventory/inventory.component';
     NavbarComponent,
     RegisterComponent,
     ProductlistComponent,
-    InventoryComponent
+    InventoryComponent,
+    PagenotfoundComponent,
+    ChangevalueComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [{provide:ProductsdataService, useClass:AmazondataService}],
+  providers: [ProductsdataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

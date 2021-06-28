@@ -9,11 +9,20 @@ import { products } from '../products/products';
 })
 export class InventoryComponent implements OnInit {
   productlist:Array<products>;
-  constructor(pdataservice:ProductsdataService){
+  constructor(private pdataservice:ProductsdataService){
     //let pdataservice = new ProductsdataService();
-    this.productlist = pdataservice.getproductlist();
+    
   }
   ngOnInit(): void {
+    this.productlist = this.pdataservice.getproductlist();
+  } 
+
+  setnewprice(np:number, idn:number){
+    for(var i=0; i < this.productlist.length; i++){
+      if(this.productlist[i].id == idn){
+        this.productlist[i].price =np;
+      }
+    }
   }
 
 }

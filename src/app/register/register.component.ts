@@ -10,8 +10,8 @@ export class RegisterComponent implements OnInit {
   constructor() { 
     this.userlist = new Array<user>();
 
-    let u1 = new user("shreyas", "hupare", "SMH", "abc@gmail.com", "07/12/1999");
-    this.userlist.push(u1);
+    //let u1 = new user("shreyas", "hupare", "SMH", "abc@gmail.com", "07/12/1999");
+    //this.userlist.push(u1);
   }
 
   ngOnInit(): void {
