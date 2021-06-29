@@ -2,7 +2,7 @@ import { AmazondataService } from './amazondata.service';
 import { ProductsdataService } from './productsdata.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -14,6 +14,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ChangevalueComponent } from './changevalue/changevalue.component';
 import { HttpClientModule} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +25,15 @@ import { CommonModule } from '@angular/common';
     ProductlistComponent,
     InventoryComponent,
     PagenotfoundComponent,
-    ChangevalueComponent
+    ChangevalueComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [ProductsdataService],

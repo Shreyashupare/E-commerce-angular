@@ -3,7 +3,9 @@ form {
   box-shadow: 0 0 10px rgb(41, 40, 40);
   text-align: center;
   width: fit-content;
-  padding: 25px;
+  padding: 45px;
+  padding-right: 65px;
+  padding-left: 65px;
   margin: auto;
 }
 
@@ -12,9 +14,28 @@ form {
   background-color: green;
   border-radius: 5px;
   text-align: center;
+  padding:10px;
 }
 
 .login_button:hover {
   background-color: black;
   box-shadow: 0 0 10px rgb(18, 75, 18);
+}
+
+.input{
+  padding:7px;
+  border-radius: 5px;
+
+}
+
+.input:focus{
+  border: 1px solid red;
+  box-shadow: 0px 0px 6px black;
+}
+
+.errormsg{
+  background-color: rgb(253, 209, 217);
+  border-radius: 4px;
+  color: red;
+  font-size: 14px;
 }

@@ -1,0 +1,20 @@
+div{
+    background-color: rgb(27, 27, 27);
+    height:55px;
+    position: relative;
+    bottom:0;
+    margin-bottom: 0;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+h4{
+    color: rgb(240, 212, 187);
+    text-shadow: 3px 3px 5px rgb(255, 159, 120);
+    font-size: x-large;
+    padding-top: 20px;
+    text-align: center;
+}
+body{
+    min-height: 100%;
+}
