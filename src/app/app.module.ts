@@ -15,6 +15,8 @@ import { ChangevalueComponent } from './changevalue/changevalue.component';
 import { HttpClientModule} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
+import { CartComponent } from './cart/cart.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { FooterComponent } from './footer/footer.component';
     InventoryComponent,
     PagenotfoundComponent,
     ChangevalueComponent,
-    FooterComponent
+    FooterComponent,
+    CartComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,18 @@
+table,
+thead,
+td,
+tr,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 20px;
+}
+img{
+  height: 100px;
+  width: 100px;
+}
+
+h5{
+    padding: 20px;
+    font-size: xx-large;
+}

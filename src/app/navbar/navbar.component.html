@@ -5,9 +5,10 @@
         <li class="menus" role="presentation"><a routerLink="login">Login</a></li>
         <li class="menus" role="presentation"><a routerLink="registration">Registration</a></li>
         <li class="menus" role="presentation"><a routerLink="products">Products</a></li>
-        <li class="menus" role="presentation"><a routerLink="inventory">Inventory</a></li>
-        <li class="menus" role="presentation"><a routerLink="users">Users</a></li>
-        <li class="menus" role="presentation"><a routerLink="profile">Profile</a></li>
+        <li *ngIf="islogin&&isadmin"  class="menus" role="presentation"><a routerLink="inventory">Inventory</a></li>
+        <li *ngIf="islogin"  class="menus" role="presentation"><a routerLink="users">Users</a></li>
+        <li *ngIf="islogin"  class="menus" role="presentation"><a routerLink="cart">Cart</a></li>
+        <li *ngIf="islogin" class="menus" role="presentation"><a routerLink="profile">Profile</a></li>
         <li class="user">{{username}}</li>
     </ul>
     <!--

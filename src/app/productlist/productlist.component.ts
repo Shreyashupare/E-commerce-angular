@@ -1,6 +1,8 @@
+import { CartserviceService } from './../cartservice.service';
 import { Component, OnInit } from '@angular/core';
 import { products } from '../products/products';
 import { ProductsdataService } from '../productsdata.service';
+import { IsloginService } from '../islogin.service';
 @Component({
   selector: 'app-productlist',
   templateUrl: './productlist.component.html',
@@ -8,13 +10,19 @@ import { ProductsdataService } from '../productsdata.service';
   //providers: [{provide:ProductsdataService, useClass:ProductsdataService}]
 })
 export class ProductlistComponent implements OnInit {
-  isadmin:boolean=true;
+  isadmin:boolean=false;
+  islogin:boolean=false;
   productlist:Array<products>;
-  constructor(pdataservice:ProductsdataService){
+  constructor(pdataservice:ProductsdataService, private cartser:CartserviceService, private islog:IsloginService){
     //let pdataservice = new ProductsdataService();
     this.productlist = pdataservice.getproductlist();
   }
-
+  ngOnInit(): void {
+    this.islog.getlog().subscribe(islogged=>{
+      this.islogin = islogged;
+      console.log('in productlist'+ this.islogin);
+    })
+  }
   
 
   delete(pid:number){
@@ -25,16 +33,20 @@ export class ProductlistComponent implements OnInit {
     }
   }
   addtocart(pid:Number){
+    console.log('in product addcart '+this.islogin);
+    /*
+    if(this.islogin == false){
+      alert("You are not logged in.");
+      return;
+    }
+    */
     for(var i=0; i< this.productlist.length; i++){
       if(this.productlist[i].id == pid){
+        this.cartser.setcart(this.productlist[i]);
         alert(this.productlist[i].name +" added to cart");
         }
     }
   }
 
-  
-
-  ngOnInit(): void {
-  }
 
 }

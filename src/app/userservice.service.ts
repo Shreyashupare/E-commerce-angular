@@ -7,10 +7,17 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserserviceService {
-
-  constructor(private http:HttpClient) { }
-
-  getuser():Observable<user[]>{
+  userlist:Array<user>
+  constructor() { 
+    this.userlist = new Array<user>();
+    let u1= new user("shreyas", "hupare", "shreyas08", "abc@gmail.com", 1234567890, "********");
+    this.userlist.push(u1);
+  }
+  getuser(){
+    return this.userlist;
+  }
+  /*getuser():Observable<user[]>{
     return this.http.get<user[]>('http://jsonplaceholder.typicode.com/users');
   }
+  */
 }
