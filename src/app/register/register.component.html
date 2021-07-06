@@ -4,30 +4,30 @@
         
         <input type="text" class="input" name="firstname" placeholder="First Name" formControlName="firstname">
         <div class="errormsg" *ngIf="sf.firstname.invalid&&sf.firstname.touched">
-            <div *ngIf="sf.firstname.errors?.required">First Name is required</div>
+            <div  *ngIf="sf.firstname.errors?.required">First Name is required</div>
         </div><br><br>
-        <input type="text" class="input" name="lastname" placeholder="Last Name" formControlName="lastname"><br><br>
+        <input type="text" class="input" name="lastname" placeholder="Last Name" formControlName="lastname">
         <div class="errormsg" *ngIf="sf.lastname.invalid&&sf.lastname.touched">
             <div *ngIf="sf.lastname.errors?.required">Last Name is required</div>
-        </div>
-        <input type="text" class="input" name="username" placeholder="Username" formControlName="username"><br><br>
+        </div><br><br>
+        <input type="text" class="input" name="username" placeholder="Username" formControlName="username">
         <div class="errormsg" *ngIf="sf.username.invalid&&sf.username.touched">
             <div *ngIf="sf.username.errors?.required">Username is required</div>
             <div *ngIf="sf.username.errors?.minlength">Minimum Length Required is 5</div>
-        </div>
-        <input type="email" class="input" name="email" placeholder="Email Id" formControlName="email"><br><br>
+        </div><br><br>
+        <input type="email" class="input" name="email" placeholder="Email Id" formControlName="email">
         <div class="errormsg" *ngIf="sf.email.invalid&&sf.email.touched">
             <div *ngIf="sf.email.errors?.required">Email Id is required</div>
-        </div>
-        <input type="tel" class="input" name="mobileno" placeholder="Mobile Number" formControlName="mobileno"><br><br>
+        </div><br><br>
+        <input type="tel" class="input" name="mobileno" placeholder="Mobile Number" formControlName="mobileno">
         <div class="errormsg" *ngIf="sf.mobileno.invalid&&sf.mobileno.touched">
             <div *ngIf="sf.mobileno.errors?.required">Mobile Number is required</div>
-        </div>
-        <input type="password" class="input" name="password" placeholder="Password" formControlName="password"><br><br>
+        </div><br><br>
+        <input type="password" class="input" name="password" placeholder="Password" formControlName="password">
         <div class="errormsg" *ngIf="sf.password.invalid&&sf.password.touched">
             <div *ngIf="sf.password.errors?.required">Password is required</div>
             <div *ngIf="sf.password.errors?.minlength">Minimum Length Required is 8</div>
-        </div>
+        </div><br><br>
         <!--<input type="password" class="input" name="confirmpassword" placeholder="Confirm Password" formControlName="confirmpassword"><br><br>-->
         <button class="login_button" (click)="register()">Register</button>
     </form>

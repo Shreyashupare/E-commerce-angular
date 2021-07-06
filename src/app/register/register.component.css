@@ -39,3 +39,7 @@ form {
   color: red;
   font-size: 14px;
 }
+
+.display_error{
+  display: inline;
+}

@@ -1,3 +1,4 @@
+import { UsersComponent } from './users/users.component';
 import { AmazondataService } from './amazondata.service';
 import { ProductsdataService } from './productsdata.service';
 import { NgModule } from '@angular/core';
@@ -30,7 +31,8 @@ import { ProfileComponent } from './profile/profile.component';
     ChangevalueComponent,
     FooterComponent,
     CartComponent,
-    ProfileComponent
+    ProfileComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

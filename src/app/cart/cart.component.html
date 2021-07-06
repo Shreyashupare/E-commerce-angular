@@ -1,16 +1,18 @@
 <h2>Your Cart :</h2>
-<table class="tb">
-    <div *ngIf="productlist.length > 0; else empty">
-        <thead><th>ID</th><th>Name</th><th>Price</th><th>Image</th><th></th></thead>
-        <tr *ngFor="let product of productlist"><td>{{product.id}}</td>
-            <td>{{product.name}}</td>
-            <td>{{product.price}}</td>
-            <td><img [src]="product.imagepath"></td>
-            <td><button value="remove" (click)="remove(product.id)">Remove</button></td>
-        </tr>
+
+    <div *ngIf="productlist.length > 0">
+        <table class="tb">
+            <tr><th>ID</th><th>Name</th><th>Price</th><th>Image</th><th></th></tr>
+            <tr *ngFor="let product of productlist">
+                <td>{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td><img [src]="product.imagepath"></td>
+                <td><button value="remove" (click)="remove(product.id)">Remove</button></td>
+            </tr>
+        </table>
     </div>
-</table>
-    <ng-template #empty>
+    <div *ngIf="productlist.length == 0">
         <h5>Your Cart is empty.</h5>
-    </ng-template>
+    </div>
      

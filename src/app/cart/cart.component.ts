@@ -7,16 +7,14 @@ import { products } from '../products/products';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  productlist:Array<products>=[];
-  constructor(private cartser:CartserviceService) { }
+  productlist:Array<products>;
+  constructor(private cartser:CartserviceService) {
+    this.productlist = cartser.getcart();
+    }
+   
 
-  ngOnInit(): void {
-    this.cartser.getcart().subscribe(newcartproduct=>{
-      console.log(newcartproduct);
-      this.productlist.push(newcartproduct);
-      console.log(this.productlist);
-      console.log(this.productlist.length);
-    })
+  ngOnInit(){
+    
   }
   
   remove(pid:number){

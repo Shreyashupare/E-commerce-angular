@@ -5,13 +5,16 @@ import { products } from './products/products';
   providedIn: 'root'
 })
 export class CartserviceService {
-  constructor() { }
-  subject = new Subject<products>();
+  cartitems:Array<products>;
+  constructor() { 
+    this.cartitems = new Array<products>();
+  }
+  
   setcart(cart:products){
-    this.subject.next(cart);
+    this.cartitems.push(cart);
   }
-  getcart():Observable<products>{
-    return this.subject.asObservable();
+  getcart():Array<products>{
+    return this.cartitems;
   }
-
+  
 }

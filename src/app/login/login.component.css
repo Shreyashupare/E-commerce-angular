@@ -19,3 +19,10 @@ form {
   background-color: black;
   box-shadow: 0 0 10px rgb(18, 75, 18);
 }
+
+.errormsg{
+  background-color: rgb(253, 209, 217);
+  border-radius: 4px;
+  color: red;
+  font-size: 14px;
+}

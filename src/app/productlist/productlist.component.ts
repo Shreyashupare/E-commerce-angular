@@ -11,18 +11,19 @@ import { IsloginService } from '../islogin.service';
 })
 export class ProductlistComponent implements OnInit {
   isadmin:boolean=false;
-  islogin:boolean=false;
+  loggedin:boolean=false;
   productlist:Array<products>;
-  constructor(pdataservice:ProductsdataService, private cartser:CartserviceService, private islog:IsloginService){
+  constructor(private pdataservice:ProductsdataService, private cartser:CartserviceService, private islog:IsloginService){
     //let pdataservice = new ProductsdataService();
-    this.productlist = pdataservice.getproductlist();
+
+    this.loggedin = islog.get();
   }
-  ngOnInit(): void {
-    this.islog.getlog().subscribe(islogged=>{
-      this.islogin = islogged;
-      console.log('in productlist'+ this.islogin);
-    })
-  }
+  ngOnInit() {
+    this.productlist = this.pdataservice.getproductlist();
+    
+      console.log('in productlist'+ this.loggedin);
+    }
+  
   
 
   delete(pid:number){
@@ -33,9 +34,10 @@ export class ProductlistComponent implements OnInit {
     }
   }
   addtocart(pid:Number){
-    console.log('in product addcart '+this.islogin);
+    
+    //console.log('in product addcart '+this.islogged);
     /*
-    if(this.islogin == false){
+    if(this.islogged == false){
       alert("You are not logged in.");
       return;
     }

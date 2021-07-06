@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
   login(){
     this.islogin=true;
     this.islog.setlog(this.islogin);
+    this.islog.set(this.islogin);
     this.auth.setusername(this.username);
     this.router.navigateByUrl('/products');
   }

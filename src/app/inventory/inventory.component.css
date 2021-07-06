@@ -7,3 +7,19 @@ th {
   border-collapse: collapse;
   padding: 20px;
 }
+
+input{
+  margin:10px;
+  width: 100px;
+}
+
+button{
+  margin:10px;
+
+}
+
+button:hover{
+  background-color: rgb(4, 160, 4);
+  border-radius: 5px;
+  color:ivory
+}

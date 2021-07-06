@@ -1,0 +1,19 @@
+div{
+    text-align: center;
+    border:1px solid black;
+    border-radius: 5px;
+    padding: 25px;
+    width: fit-content;
+    margin: auto;
+    font-size: 20px;
+}
+
+p{
+    font-size: xx-large;
+    text-align: center;
+}
+button{
+    background-color: rgb(156, 4, 4);
+    color:white;
+    border-radius: 5px;
+}

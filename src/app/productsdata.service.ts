@@ -23,6 +23,9 @@ export class ProductsdataService {
   getproductlist(){
     return this.productlist;
   }
+  addnewproduct(np:products){
+    this.productlist.push(np);
+  }
 }
 
 
