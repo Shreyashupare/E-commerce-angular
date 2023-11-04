@@ -1,5 +1,5 @@
-# Shreyas
-
+# E-commerce website in angular
+Training: Internship @ Persistent Systems Pvt. Ltd.
 what didn't implemented 
 #form validation by checking username and password from json file
 #seperate for user and admin login
